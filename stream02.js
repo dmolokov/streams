@@ -5,10 +5,9 @@ const wstream = fs.createWriteStream('copy.txt');
 const MyEncryptor = require('./myencryptor');
 const myencryptor = new MyEncryptor();
 
+rstream.pipe(myencryptor);
 myencryptor.pipe(process.stdout);
 myencryptor.pipe(wstream);
-rstream.pipe(myencryptor);
-myencryptor.end();
 
 //Описание задания: 
 //Часть 2.
