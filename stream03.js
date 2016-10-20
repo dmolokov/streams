@@ -8,10 +8,10 @@ const mytransform = new MyTransform();
 myreadable.pipe(mytransform);
 mytransform.pipe(mywritable);
 mytransform.on('data', function(record) {
-  mytransform.pause();
-  setTimeout(function() {
-    mytransform.resume();
-  },1000);
+	mytransform.pause();
+	setTimeout(function() {
+		mytransform.resume();
+	},1000);
 });
 	
 //Для получения зачета с отличием: 
